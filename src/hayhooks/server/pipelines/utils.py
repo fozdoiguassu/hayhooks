@@ -39,7 +39,7 @@ def find_streaming_component(pipeline: Pipeline) -> Tuple[Component, str]:
     streaming_component_name = ""
 
     for name, component in pipeline.walk():
-        if hasattr(component, "streaming_callback"):
+        if hasattr(component, "streaming_callback") or hasattr(component, "_streaming_callback"):
             log.trace(f"Streaming component found in '{name}' with type {type(component)}")
             streaming_component = component
             streaming_component_name = name
