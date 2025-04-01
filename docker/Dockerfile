@@ -11,7 +11,7 @@ RUN apt-get update && \
 ARG hayhooks_version
 
 # Shallow clone Hayhooks repo, we'll install from the local sources
-RUN git clone --depth=1 --branch=${hayhooks_version} https://github.com/deepset-ai/hayhooks.git /opt/hayhooks
+RUN git clone --depth=1 --branch=${hayhooks_version} https://github.com/fozdoiguassu/hayhooks.git /opt/hayhooks
 WORKDIR /opt/hayhooks
 
 # Use a virtualenv we can copy over the next build stage
