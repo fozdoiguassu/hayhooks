@@ -24,6 +24,8 @@ RUN pip install --upgrade pip && \
 
 FROM $base_image AS final
 
+LABEL org.opencontainers.image.source=https://github.com/fozdoiguassu/hayhooks
+
 COPY --from=build-image /opt/venv /opt/venv
 
 ARG pipelines_dir
