@@ -3,7 +3,7 @@ variable "HAYHOOKS_VERSION" {
 }
 
 variable "IMAGE_NAME" {
-  default = "deepset/hayhooks"
+  default = "ghcr.io/fozdoiguassu/hayhooks"
 }
 
 variable "IMAGE_TAG_SUFFIX" {
